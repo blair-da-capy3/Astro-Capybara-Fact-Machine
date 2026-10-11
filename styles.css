@@ -1,0 +1,137 @@
+.capy-cont{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+@media (min-width: 769px) {
+    #capy {
+    width: 500px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    }
+
+    .bubble{
+        position: absolute;
+        bottom: 230px;
+        right: 450px;
+        background: #fff;
+        border-radius: 14px;
+        box-shadow: 0 4px 12px rgb(149, 186, 255);
+        width: 220px;
+        padding: 15px;
+        font-family: 'Exo 2';
+        text-align: left;
+        font-size: 0.95rem;
+        color:#5c2a7e;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+    }
+}
+
+
+@media (max-width: 768px) {
+    #capy {
+        width: 300px;
+    }
+    
+    .bubble {
+        position: absolute;
+        bottom: 104%;
+        left: 45%;
+        transform: translateX(-40%);
+        width: 160px;
+        font-size: 0.85rem;
+        background: #fff;
+        border-radius: 14px;
+        box-shadow: 0 4px 12px rgb(149, 186, 255);
+        padding: 15px;
+        font-family: 'Exo 2';
+        text-align: left;
+        font-size: 0.95rem;
+        color:#5c2a7e;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+    }
+}
+
+#capy:hover{
+    transform: scale(1.05);
+}
+
+
+.bubble.show {
+    opacity: 1;
+    color: rgb(185, 109, 198);
+    font-weight: 600;
+}
+
+#closeBubble {
+    position: absolute;
+    top: 4px;
+    right: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.stars {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.star2 img {
+    position: absolute;
+    width: 30px;
+}
+.star3 img {
+    position: absolute;
+    transform: translateX(30px);
+    width: 30px;
+}
+.star4 img {
+    position: absolute;
+    transform: translateX(50%);
+    width: 30px;
+}
+
+.star5 img {
+    position: absolute;
+    transform: translateX(75%);
+    width: 30px;
+}
+.star6 img {
+    position: absolute;
+    transform: translateX(15%);
+    width: 30px;
+}
+
+.star {
+    width: 30px;
+    animation: fall 10s linear infinite;
+}
+
+.s1 { left: 10%; animation-duration: 12s;}
+.s2 { left: 25%; animation-duration: 16s; animation-delay: -2s;}
+.s3 { left: 45%; animation-duration: 14s; animation-delay: -6s;}
+.s4 { left: 65%; animation-duration: 18s; animation-delay: -4s;}
+.s5 { left: 80%; animation-duration: 13s; animation-delay: -8s;}
+.s6 { left: 95%; animation-duration: 15s; animation-delay: -11s;}
+
+@keyframes popIn {
+    0% {transform: translateX(-50%) scale(0.6);}
+    60% {transform: translateX(-50) scale(1.05);}
+    100% {transform: translateX(-50%) scale(1);}
+}
+body{
+    background-color: #9166ae;
+}
+
+@keyframes fall {
+    from { transform: translateY(-100px);}
+
+    to {transform: translateY(110vh);}
+}
