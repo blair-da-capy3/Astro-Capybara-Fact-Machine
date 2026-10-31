@@ -16,7 +16,7 @@
     .bubble{
         position: absolute;
         bottom: 230px;
-        right: 450px;
+        right: 550px;
         background: #fff;
         border-radius: 14px;
         box-shadow: 0 4px 12px rgb(149, 186, 255);
@@ -116,7 +116,7 @@
 
 .s1 { left: 10%; animation-duration: 12s;}
 .s2 { left: 25%; animation-duration: 16s; animation-delay: -2s;}
-.s3 { left: 45%; animation-duration: 14s; animation-delay: -6s;}
+.s3 { left: 34%; animation-duration: 14s; animation-delay: -6s;}
 .s4 { left: 65%; animation-duration: 18s; animation-delay: -4s;}
 .s5 { left: 80%; animation-duration: 13s; animation-delay: -8s;}
 .s6 { left: 95%; animation-duration: 15s; animation-delay: -11s;}
@@ -128,6 +128,26 @@
 }
 body{
     background-color: #9166ae;
+}
+
+.btn{
+    margin-right: 5px;
+    padding: 5px;
+    background: #d0a6ec;
+    border-radius: 7px;
+    border-style: solid;
+    border-color: #fff;
+    font-family: "Exo 2";
+    color: #fff;
+    cursor: pointer;
+}
+
+.btn:hover {
+    font-weight: 500;
+    color: #fff7bb;
+    background-color: #8236b5;
+    border-color: #fff7bb;
+    transform: scale(1.02);
 }
 
 @keyframes fall {

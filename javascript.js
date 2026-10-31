@@ -42,3 +42,17 @@ facts.length)];
     bubble.offsetHeight; 
     bubble.style.animation = null;
 })
+
+const music = document.getElementById("bg-music");
+music.volume = 0.05;
+
+function playMusic(){
+    music.play().catch(error => {
+        console.log("Playback was prevented by the brower:", error);
+    });
+}
+
+function stopMusic() {
+    music.pause();
+    music.currentTime = 0;
+}
